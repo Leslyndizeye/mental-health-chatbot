@@ -73,3 +73,17 @@ Optimizer: AdamW
 Max Length: 150 tokens
 Temperature: 0.7
 Top-p Sampling: 0.9
+### Hardware Requirements
+
+- **GPU**: Tesla T4 (16GB VRAM) via Google Colab
+- **Training Time**: 1 hour 18 minutes 52 seconds
+- **Note**: CPU training and local laptop (HP) attempts failed due to insufficient computational resources
+## Installation
+
+
+
+### Prerequisites
+
+- Python 3.8 or higher
+- CUDA-compatible GPU (recommended)
+- Google Colab account (for training)
