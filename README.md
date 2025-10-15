@@ -6,17 +6,6 @@ An AI-powered conversational agent that provides emotional support using natural
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-red.svg)
 ![GPU](https://img.shields.io/badge/GPU-Tesla%20T4-green.svg)
 
-## Table of Contents
-- [Problem Statement](#problem-statement)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Technical Challenges](#technical-challenges)
-- [Training Process](#training-process)
-- [Results & Evaluation](#results--evaluation)
-- [How to Run](#how-to-run)
-- [Limitations](#limitations)
-- [References](#references)
-
 ## Problem Statement
 
 Mental health support faces critical barriers including limited therapist availability, high costs, social stigma, and lack of 24/7 support. This project develops an AI chatbot that provides accessible, immediate emotional support while recognizing mental health concerns.
