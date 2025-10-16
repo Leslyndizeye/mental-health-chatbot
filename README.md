@@ -71,7 +71,7 @@ Anxiety, depression, stress, sleep, relationships, grief, coping, and self-estee
 - **Framework:** Hugging Face Transformers + PyTorch  
 
 **Configuration**
-```python
+
 Epochs = 40
 Batch Size = 4
 Learning Rate = 5e-5
@@ -177,7 +177,6 @@ Runtime → Change runtime type → GPU → Tesla T4
 
 # 5. Launch Chatbot
 Run all cells → Access Gradio interface link
-```
 
 ---
 
