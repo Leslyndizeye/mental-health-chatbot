@@ -6,6 +6,11 @@
 **Date:** October 2024  
 **Domain:** Healthcare (Mental Health Support)
 
+**Live Demo:** https://huggingface.co/spaces/leslylezoo/mental-health-chatbot  
+**Model Repository:** https://huggingface.co/leslylezoo/mental-health-chatbot-gpt2  
+**Code Repository:** https://github.com/Leslyndizeye/mental-health-chatbot  
+**Demo Video:** https://www.youtube.com/watch?v=1hcipuXIdfA
+
 ---
 
 ## Executive Summary
@@ -21,10 +26,6 @@ The chatbot was built by fine-tuning GPT-2, a pre-trained transformer model with
 - Implemented context-aware, empathetic response generation
 - Created comprehensive documentation and demo materials
 
-**Live Demo:** https://huggingface.co/spaces/leslylezoo/mental-health-chatbot  
-**Model Repository:** https://huggingface.co/leslylezoo/mental-health-chatbot-gpt2  
-**Code Repository:** https://github.com/Leslyndizeye/mental-health-chatbot  
-**Demo Video:** https://www.youtube.com/watch?v=1hcipuXIdfA
 
 ---
 
