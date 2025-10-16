@@ -191,9 +191,7 @@ Run all cells → Access Gradio interface link
 ## 🗂️ Project Structure
 
 ```
-lesly@DESKTOP-I7FTJT2 MINGW64 ~/Desktop/summ/mental-health-chatbot (main)
-$ tree
-.
+
 |-- data
 |   |-- processed
 |   |   |-- test.csv
@@ -222,10 +220,6 @@ $ tree
 |       `-- vocab.json
 |-- README.md
 
-8 directories, 20 files
-
-lesly@DESKTOP-I7FTJT2 MINGW64 ~/Desktop/summ/mental-health-chatbot (main)
-$
 ```
 
 ---
