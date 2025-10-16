@@ -289,43 +289,41 @@ python app.py
 
 ## 🗂️ Project Structure
 
-
 mental-health-chatbot/
 │
 ├── data/
-│   ├── processed/
-│   │   ├── train.csv
-│   │   ├── val.csv
-│   │   ├── test.csv
-│   │   ├── train.txt
-│   │   └── val.txt
-│   └── raw/
-│       └── all_conversations.csv
+│ ├── processed/
+│ │ ├── train.csv
+│ │ ├── val.csv
+│ │ ├── test.csv
+│ │ ├── train.txt
+│ │ └── val.txt
+│ └── raw/
+│ └── all_conversations.csv
 │
 ├── models/
-│   ├── mental_health_gpt2/
-│   │   ├── config.json
-│   │   ├── generation_config.json
-│   │   ├── model.safetensors
-│   │   ├── merges.txt
-│   │   ├── special_tokens_map.json
-│   │   ├── tokenizer_config.json
-│   │   └── vocab.json
-│   └── tokenizer/
-│       ├── merges.txt
-│       ├── special_tokens_map.json
-│       ├── tokenizer_config.json
-│       └── vocab.json
+│ ├── mental_health_gpt2/
+│ │ ├── config.json
+│ │ ├── generation_config.json
+│ │ ├── model.safetensors
+│ │ ├── merges.txt
+│ │ ├── special_tokens_map.json
+│ │ ├── tokenizer_config.json
+│ │ └── vocab.json
+│ └── tokenizer/
+│ ├── merges.txt
+│ ├── special_tokens_map.json
+│ ├── tokenizer_config.json
+│ └── vocab.json
 │
 ├── docs/
-│   ├── evaluation_results.txt
-│   └── training_logs.txt
+│ ├── evaluation_results.txt
+│ └── training_logs.txt
 │
-├── mental_health_chatbot.ipynb  # Main training notebook
-├── app.py                        # Gradio deployment app
-├── requirements.txt              # Python dependencies
-└── README.md                     # This file
-
+├── mental_health_chatbot.ipynb # Main training notebook
+├── app.py # Gradio deployment app
+├── requirements.txt # Python dependencies
+└── README.md # This file
 
 ## ⚠️ Limitations
 
