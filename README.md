@@ -8,11 +8,6 @@
 
 An AI-powered conversational agent that provides emotional support using natural language processing.  
 Built by fine-tuning GPT-2 on mental health counseling conversations.
-
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-red.svg)
-![GPU](https://img.shields.io/badge/GPU-Tesla%20T4-green.svg)
-
 ---
 
 ## 📚 Table of Contents
