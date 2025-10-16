@@ -3,7 +3,6 @@
 * **YouTube Demo:** [https://www.youtube.com/watch?v=1hcipuXIdfA](https://www.youtube.com/watch?v=1hcipuXIdfA)
 * **GitHub Repository:** [https://github.com/Leslyndizeye/mental-health-chatbot.git](https://github.com/Leslyndizeye/mental-health-chatbot.git)
   
-````markdown
 # 🧠 Mental Health Support Chatbot
 
 An AI-powered conversational agent that provides emotional support using natural language processing.  
@@ -80,7 +79,6 @@ Optimizer = AdamW
 Weight Decay = 0.01
 Temperature = 0.7
 Top-p Sampling = 0.9
-````
 
 **Layers**
 
