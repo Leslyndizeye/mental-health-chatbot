@@ -290,6 +290,7 @@ python app.py
 ## 🗂️ Project Structure
 
 \`\`\`
+
 mental-health-chatbot/
 │
 ├── data/
@@ -325,7 +326,6 @@ mental-health-chatbot/
 ├── app.py                        # Gradio deployment app
 ├── requirements.txt              # Python dependencies
 └── README.md                     # This file
-\`\`\`
 
 ---
 
