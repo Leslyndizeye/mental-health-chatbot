@@ -289,7 +289,6 @@ python app.py
 
 ## 🗂️ Project Structure
 
-\`\`\`
 
 mental-health-chatbot/
 │
@@ -327,7 +326,6 @@ mental-health-chatbot/
 ├── requirements.txt              # Python dependencies
 └── README.md                     # This file
 
----
 
 ## ⚠️ Limitations
 
