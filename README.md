@@ -182,7 +182,6 @@ Run all cells → Access Gradio interface link
 
 ## 🗂️ Project Structure
 
-```
 
 |-- data
 |   |-- processed
@@ -212,7 +211,6 @@ Run all cells → Access Gradio interface link
 |       `-- vocab.json
 |-- README.md
 
-```
 
 ---
 
