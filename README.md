@@ -1,3 +1,8 @@
+## 🎥 Demo & Repository
+
+* **YouTube Demo:** [https://www.youtube.com/watch?v=1hcipuXIdfA](https://www.youtube.com/watch?v=1hcipuXIdfA)
+* **GitHub Repository:** [https://github.com/Leslyndizeye/mental-health-chatbot.git](https://github.com/Leslyndizeye/mental-health-chatbot.git)
+  
 ````markdown
 # 🧠 Mental Health Support Chatbot
 
@@ -186,20 +191,41 @@ Run all cells → Access Gradio interface link
 ## 🗂️ Project Structure
 
 ```
-mental-health-chatbot/
-│
-├── mental_health_chatbot.ipynb    # Model training & chatbot logic
-├── chat_interface.py              # Gradio-based UI
-├── data/                          # Dataset splits
-│   ├── train.json
-│   ├── val.json
-│   └── test.json
-├── models/
-│   └── mental_health_gpt2/        # Fine-tuned model weights
-├── docs/
-│   ├── training_logs.txt
-│   └── evaluation_results.txt
-└── README.md
+lesly@DESKTOP-I7FTJT2 MINGW64 ~/Desktop/summ/mental-health-chatbot (main)
+$ tree
+.
+|-- data
+|   |-- processed
+|   |   |-- test.csv
+|   |   |-- train.csv
+|   |   |-- train.txt
+|   |   |-- val.csv
+|   |   `-- val.txt
+|   `-- raw
+|       `-- all_conversations.csv
+|-- docs
+|   |-- evaluation_results.txt
+|   `-- training_logs.txt
+|-- mental_health_chatbot.ipynb
+|-- models
+|   |-- mental_health_gpt2
+|   |   |-- config.json
+|   |   |-- generation_config.json
+|   |   |-- merges.txt
+|   |   |-- special_tokens_map.json
+|   |   |-- tokenizer_config.json
+|   |   `-- vocab.json
+|   `-- tokenizer
+|       |-- merges.txt
+|       |-- special_tokens_map.json
+|       |-- tokenizer_config.json
+|       `-- vocab.json
+|-- README.md
+
+8 directories, 20 files
+
+lesly@DESKTOP-I7FTJT2 MINGW64 ~/Desktop/summ/mental-health-chatbot (main)
+$
 ```
 
 ---
@@ -213,8 +239,3 @@ mental-health-chatbot/
 * Primary language: English
 
 ---
-
-## 🎥 Demo & Repository
-
-* **YouTube Demo:** [https://www.youtube.com/watch?v=1hcipuXIdfA](https://www.youtube.com/watch?v=1hcipuXIdfA)
-* **GitHub Repository:** [https://github.com/Leslyndizeye/mental-health-chatbot.git](https://github.com/Leslyndizeye/mental-health-chatbot.git)
