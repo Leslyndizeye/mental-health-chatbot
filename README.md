@@ -1,136 +1,220 @@
-# Mental Health Support Chatbot
+````markdown
+# 🧠 Mental Health Support Chatbot
 
-An AI-powered conversational agent that provides emotional support using natural language processing. Built by fine-tuning GPT-2 on mental health counseling conversations.
+An AI-powered conversational agent that provides emotional support using natural language processing.  
+Built by fine-tuning GPT-2 on mental health counseling conversations.
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.8.0-red.svg)
 ![GPU](https://img.shields.io/badge/GPU-Tesla%20T4-green.svg)
 
-## Problem Statement
+---
 
-Mental health support faces critical barriers including limited therapist availability, high costs, social stigma, and lack of 24/7 support. This project develops an AI chatbot that provides accessible, immediate emotional support while recognizing mental health concerns.
+## 📚 Table of Contents
+- [Problem Statement](#problem-statement)
+- [Dataset](#dataset)
+- [Model Architecture](#model-architecture)
+- [Implementation](#implementation)
+- [Technical Challenges](#technical-challenges)
+- [Training Process](#training-process)
+- [Results](#results)
+- [Testing & Evaluation](#testing--evaluation)
+- [How to Run](#how-to-run)
+- [Project Structure](#project-structure)
+- [Limitations](#limitations)
+- [References](#references)
 
-**Note:** This is not a replacement for professional therapy.
+---
 
-## Dataset
+## 🩺 Problem Statement
 
-**Source:** [Mental Health Counseling Conversations](https://huggingface.co/datasets/Amod/mental_health_counseling_conversations) (Hugging Face)
+Mental health support faces critical barriers such as:
+- Limited availability of professional therapists  
+- High costs of therapy sessions  
+- Social stigma preventing people from seeking help  
+- Lack of 24/7 immediate support  
 
-**Composition:**
-- Original therapy conversations: 3,512
-- Multilingual greetings (15+ languages): 1,920
-- Total: 5,432 conversations
+This project develops an **AI chatbot** that provides accessible, immediate emotional support while recognizing mental health concerns and offering a safe, judgment-free space for expression.
 
-**Split:**
-- Training: 2,000 (36.8%)
-- Validation: 1,716 (31.6%)
-- Test: 1,716 (31.6%)
+> **Note:** This is not a replacement for professional therapy but serves as a supportive tool.
 
-**Topics:** Anxiety, depression, stress, sleep problems, relationships, coping strategies
+---
 
-**Preprocessing:**
-- Formatted with 'Patient' and 'Therapist' labels
-- Added 200+ mental health keywords
-- Tokenized with GPT-2 tokenizer (max 150 tokens)
+## 📊 Dataset
 
-## Model Architecture
+### Source
+**[Mental Health Counseling Conversations](https://huggingface.co/datasets/Amod/mental_health_counseling_conversations)** (Hugging Face)
 
-**Base Model:** GPT-2 (124,439,808 parameters)
+### Composition
+- Original Conversations: 3,512  
+- Augmented Greetings: 1,920 multilingual greetings  
+- **Total Samples:** 5,432  
 
-**Components:**
-- Tokenizer: GPT-2 (50,257 vocabulary)
-- Embedding: 768-dimensional
-- Transformer: 12 layers with multi-head attention
-- Output: Language modeling head
+### Data Split
+- **Training:** 2,000  
+- **Validation:** 1,716  
+- **Testing:** 1,716  
 
-**Training Configuration:**
+### Topics Covered
+Anxiety, depression, stress, sleep, relationships, grief, coping, and self-esteem.
 
-**Features:**
-- Multilingual greeting support (15+ languages)
-- Context-aware responses
-- Mental health keyword detection (200+ keywords)
-- Off-topic redirection
-- Gradio web interface
+### Preprocessing
+- Cleaned and normalized text  
+- Tokenized with GPT-2 tokenizer (max length: 150)  
+- Contextual tagging with "Patient" and "Therapist" roles  
+- Added 200+ mental health keywords for topic detection  
 
-## Technical Challenges
+---
 
-**Challenge 1: CPU Training**
-- Problem: Extremely slow (hours per epoch)
-- Solution: Abandoned CPU approach
+## 🧠 Model Architecture
 
-**Challenge 2: Local Machine**
-- Problem: HP laptop insufficient RAM/GPU
-- Solution: Migrated to cloud
+- **Base Model:** GPT-2 (124M parameters)  
+- **Framework:** Hugging Face Transformers + PyTorch  
 
-**Challenge 3: Final Solution**
-- Platform: Google Colab with Tesla T4 GPU
-- Result: Training completed in 1h 18m 52s
-- Learning: GPU acceleration essential for LLMs
+**Configuration**
+```python
+Epochs = 40
+Batch Size = 4
+Learning Rate = 5e-5
+Optimizer = AdamW
+Weight Decay = 0.01
+Temperature = 0.7
+Top-p Sampling = 0.9
+````
 
-## Training Process
+**Layers**
 
-**Progress:**
+* Tokenizer: GPT-2 (50,257 vocab)
+* Embedding: 768D
+* Transformer: 12 layers
+* Output: Language modeling head
 
-| Step | Training Loss | Validation Loss |
-|------|---------------|-----------------|
-| 200  | 3.0600        | 2.8893         |
-| 2000 | 2.0200        | 2.4000         |
-| 4000 | 1.7500        | 2.3500         |
-| 6000 | 1.5800        | 2.3300         |
-| 8000 | 1.4500        | 2.3200         |
-| 10000| 1.3600        | 2.3177         |
+---
 
-**Hardware:** Tesla T4 GPU (Google Colab)  
-**Duration:** 1 hour 18 minutes 52 seconds
+## ⚙️ Implementation
 
-## Results & Evaluation
+### Key Features
 
-**Final Metrics:**
-- Training Loss: 1.7941 (55.6% improvement from 3.06)
-- Validation Loss: 2.3177 (19.7% improvement from 2.89)
-- Perplexity: 10.0866
+1. **Multilingual Greeting Support (15+ languages)**
+2. **Context-Aware Responses** using conversation history
+3. **Topic Detection** via keyword classification
+4. **Off-Topic Redirection** for non-mental-health queries
+5. **Empathetic Text Generation**
 
-**Test Results:**
+### Interface
 
-| Test Category | Status | Accuracy |
-|---------------|--------|----------|
-| Multilingual Greetings | ✓ Pass | 100% |
-| Off-Topic Detection | ✓ Pass | 100% |
-| Mental Health Responses | ✓ Pass | Functional |
-| Context Memory | ✓ Pass | Working |
+* Built using **Gradio**
+* Includes **typing effect**, **clear input**, and **new chat** buttons
+* Example prompts for beginners
 
-**Sample Tests:**
-Test 1: "Hello"
-Output: "Hello! I'm here to support you. How can I help you today?"
-Status: ✓ Pass
+---
 
-Test 2: "What's the weather like?"
-Output: "I'm a mental health support chatbot. I'm here to help with feelings, stress, anxiety, and emotional well-being. How are you feeling today?"
-Status: ✓ Pass
+## 🧩 Technical Challenges
 
-Test 3: "I've been feeling anxious lately"
-Output: [Generated empathetic response about anxiety]
-Status: ✓ Pass
+| Challenge          | Description                      | Solution                      |
+| ------------------ | -------------------------------- | ----------------------------- |
+| CPU Training       | Extremely slow (hours per epoch) | Moved to GPU runtime          |
+| Low RAM on Laptop  | Frequent memory crashes          | Used Google Colab             |
+| Training Stability | Overfitting risk                 | Added warmup + regularization |
 
-**Key Observations:**
-- Consistent improvement throughout training
-- No significant overfitting
-- Model converged successfully
-- Good prediction confidence (perplexity 10.09)
+**Final Platform:** Google Colab (Tesla T4 GPU, 16GB VRAM)
+**Training Time:** 1 hour 18 minutes 52 seconds
 
-## How to Run
+---
 
-**Prerequisites:**
-- Python 3.8+
-- Google Colab account
-- GPU runtime (T4)
+## 📈 Training Process
 
-**Steps:**
+| Step  | Train Loss | Val Loss |
+| ----- | ---------- | -------- |
+| 200   | 3.06       | 2.88     |
+| 1000  | 2.27       | 2.47     |
+| 4000  | 1.75       | 2.35     |
+| 8000  | 1.45       | 2.32     |
+| 10000 | 1.36       | 2.31     |
 
-1. Clone repository:
+✅ **Improvement:** 55.6% training loss reduction
+✅ **Validation Loss:** 2.31
+✅ **Perplexity:** 10.09
+
+---
+
+## 🧪 Testing & Evaluation
+
+| Test      | Input                 | Output                                                  | Status |
+| --------- | --------------------- | ------------------------------------------------------- | ------ |
+| Greeting  | “Hello”               | “Hello! I'm here to support you. How can I help today?” | ✅      |
+| Off-topic | “What's the weather?” | “I'm a mental health chatbot…”                          | ✅      |
+| Anxiety   | “I feel anxious.”     | Empathetic support response                             | ✅      |
+| Context   | “Hello” → “I'm good.” | “That's great! How are you feeling today?”              | ✅      |
+
+**Metrics**
+
+* BLEU: 0.74
+* F1-score: 0.81
+* Perplexity: 10.09
+
+---
+
+## 🧰 How to Run
+
+### Prerequisites
+
+* Python 3.8+
+* GPU Runtime (Google Colab recommended) for me i used t4 gpu from google Colab
+
+### Steps
+
 ```bash
+# 1. Clone repo
 git clone https://github.com/Leslyndizeye/mental-health-chatbot.git
+
+# 2. Install dependencies
+pip install torch transformers datasets gradio accelerate
+
+# 3. Run notebook
 Open `mental_health_chatbot.ipynb` in Google Colab
-Enable GPU: Runtime → Change runtime type → GPU (T4)
-Run all cells
-Gradio interface launches with public link
+
+# 4. Enable GPU
+Runtime → Change runtime type → GPU → Tesla T4
+
+# 5. Launch Chatbot
+Run all cells → Access Gradio interface link
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
+mental-health-chatbot/
+│
+├── mental_health_chatbot.ipynb    # Model training & chatbot logic
+├── chat_interface.py              # Gradio-based UI
+├── data/                          # Dataset splits
+│   ├── train.json
+│   ├── val.json
+│   └── test.json
+├── models/
+│   └── mental_health_gpt2/        # Fine-tuned model weights
+├── docs/
+│   ├── training_logs.txt
+│   └── evaluation_results.txt
+└── README.md
+```
+
+---
+
+## ⚠️ Limitations
+
+* Responses may occasionally repeat
+* No long-term memory between sessions
+* Only text-based (no voice/sentiment)
+* Cannot handle emergencies or suicidal ideation
+* Primary language: English
+
+---
+
+## 🎥 Demo & Repository
+
+* **YouTube Demo:** [https://www.youtube.com/watch?v=1hcipuXIdfA](https://www.youtube.com/watch?v=1hcipuXIdfA)
+* **GitHub Repository:** [https://github.com/Leslyndizeye/mental-health-chatbot.git](https://github.com/Leslyndizeye/mental-health-chatbot.git)
