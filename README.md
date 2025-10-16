@@ -285,7 +285,6 @@ python app.py
 3. Run all cells
 4. Access the Gradio interface via the generated link
 
----
 
 ## 🗂️ Project Structure
 
